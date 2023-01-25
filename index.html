@@ -30,14 +30,73 @@
   function auth(){
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    if (username== "admin","ahmed_12","Zeze_salim","Arwa_Ramadan","BASHAR","Rawda_Taha","Marco","Sama_Mahmoud","Abdelrahman_M_Salah","Beshoy_Romany","sameh1102","Ayman_Etman_2004","Esraa_Ahmed_Ali","MohamedSultan","Aya_Azzam_Abdel_Gwad","Narden_Rafat","Radwa_safwat","Reham_Khaled","Ahmed_Osama","Ahmed_Fawzy","Youssef_shaban","Alaa_Ezzat_fathy","Hager_Mahmoud_Abdulla","Elamal_nadi","Alyaa_Abo_Elkhair","asmaa_Anwer","Engy_Amer","Mariam_Mahmoud_Abdallah","Sama_Anwar","Rawan_Sameh_Mahmoud","Sohila_gaber","Sohil7","Mohamed_Hesham","Menna_Mostafa","Sal7ofa_Nemoz","Medo_elropy","osamasayed511","ziad_mokhtar","Mohamed_Gamal","mohammedhayman95","Ziadsaqr111","marinabassem30@gmail.com","Asmaa_Mohamed","Yasmin_mohamed","Mariam_magdy_fouad","Gelan_mohsen","Mohamed_Gamal","Mohamed_Hesham","Eyadosama","saharehab","Taghreedsameh","Eman_othman_mohamed"&& password=="333","Ahmed142004","12345","12345678910","0105536@#$","Roode1532003M","12345678","34000","GwentCorpus_2468","1960mena@ssd","elkhmsawy110211","@Ayman_2004#","306126","mohamedsultan1182004@","2182004","Narden66","radwa25&#","Reham12345","45677654","Ahmed2004","youssef 1230400","alaaezzatsh57","hayc36g","A151**","10102003","aan123@","86248973","mr123456","Sama152004","rawan123456","1912004","12345s","442006","Menna2321","Sla7ef.20","me1122","DREAM@osama511","01094707586Ziad","panda@556612","1242004","MARINA2004","Estapraq764","yasminn123","88884444","gelan7788#0","Mo16141999","442006","0000eeee","sahar@1252003","1102023","Eman1462003"){
-      window.location.assign('main.html');
-      alert("Login successful")
-    }
-    else{
-      alert("Login failed")
-      return;
-    }
+    const users = {
+    "admin": "333",
+    "ahmed_12": "Ahmed142004",
+    "Zeze_salim": "12345",
+    "Arwa_Ramadan": "12345678910",
+    "BASHAR": "0105536@#$",
+    "Rawda_Taha": "Roode1532003M",
+    "Marco": "12345678",
+    "Sama_Mahmoud": "34000",
+    "Abdelrahman_M_Salah": "GwentCorpus_2468",
+    "Beshoy_Romany": "1960mena@ssd",
+    "sameh1102": "elkhmsawy110211",
+    "Ayman_Etman_2004": "@Ayman_2004#",
+    "Esraa_Ahmed_Ali": "306126",
+    "MohamedSultan": "mohamedsultan1182004@",
+    "Aya_Azzam_Abdel_Gwad": "2182004",
+    "Narden_Rafat": "Narden66",
+    "Radwa_safwat": "radwa25&#",
+    "Reham_Khaled": "Reham12345",
+    "Ahmed_Fawzy": "Ahmed2004",
+    "Ahmed_Osama": "45677654",
+    "Youssef_shaban": "youssef1230400",
+    "Alaa_Ezzat_fathy": "alaaezzatsh57",
+    "Hager_Mahmoud_Abdulla": "hayc36g",
+    "Elamal_nadi": "A151**",
+    "Alyaa_Abo_Elkhair": "10102003",
+    "asmaa_Anwer": "aan123@",
+    "Engy_Amer": "86248973",
+    "Mariam_Mahmoud_Abdallah": "mr123456",
+    "Sama_Anwar": "Sama152004",
+    "Rawan_Sameh_Mahmoud": "rawan123456",
+    "Sohila_gaber": "1912004",
+    "Sohil7": "12345s",
+    "Mohamed_Hesham": "442006",
+    "Menna_Mostafa": "Menna2321",
+    "Sal7ofa_Nemoz": "Sla7ef.20",
+    "Medo_elropy": "me1122",
+    "osamasayed511": "DREAM@osama511",
+    "ziad_mokhtar": "01094707586Ziad",
+    "Mohamed_Gamal": "Mo16141999",
+    "mohammedhayman95": "panda@556612",
+    "Ziadsaqr111": "1242004",
+    "marinabassem30@gmail.com": "MARINA2004",
+    "Asmaa_Mohamed": "Estapraq764",
+    "Yasmin_mohamed": "yasminn123",
+    "Mariam_magdy_fouad": "888844",
+    "Gelan_mohsen": "gelan7788#0",
+    "Eyadosama": "0000eeee",
+    "saharehab": "sahar@1252003",
+    "Taghreedsameh": "1102023",
+    "Eman_othman_mohamed": "Eman1462003",
+    "Sohipahmed2004": "Sohipahmed#11",
+    "Rawdaemad2003": "Rawdaemad#22",
+
+
+    // Add more username-password pairs here
+};
+
+if (username in users && users[username] === password) {
+    window.location.assign('main.html');
+    alert("Login successful");
+} else {
+    alert("Login failed");
+    return;
+}
+
+
 
 
 
