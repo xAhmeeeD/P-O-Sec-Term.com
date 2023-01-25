@@ -115,6 +115,14 @@
              background-color: #B1D4E0;
              border-radius: 50%;}
         </style>
-        
+               <script>
+if (!sessionStorage.getItem("loggedIn")) {
+    // Redirect the user back to the login page
+    window.location.assign('login.html');
+}
+
+
+
+        </script>
 </body>
 </html>
