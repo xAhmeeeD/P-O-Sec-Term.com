@@ -89,13 +89,13 @@
 };
 
 if (username in users && users[username] === password) {
+    sessionStorage.setItem("loggedIn", true);
     window.location.assign('main.html');
     alert("Login successful");
 } else {
     alert("Login failed");
     return;
 }
-
 
 
 
