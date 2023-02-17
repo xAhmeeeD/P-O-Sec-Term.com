@@ -91,12 +91,14 @@
 
 
 
+
+
 if (username in users && users[username] === password) {
     sessionStorage.setItem("loggedIn", true);
     window.location.assign('main.html');
-    alert("Login successful ");
+    alert("Login successful" + username );
 } else {
-    alert("Login failed");
+    alert("Wrong username or password, please try again.");
     return;
 }
 
