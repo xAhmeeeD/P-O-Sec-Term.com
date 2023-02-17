@@ -1,119 +1,133 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Login Page</title>
-  <link rel="stylesheet" href="style2.css"></head>
-
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pathology</title>
+</head>
 <body>
-  
-
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <div class="user-box">
-        <input type="text" name="" required="" id="username">
-        <label>Username</label>
+   <div class="audio_Player_grid">
+      <div class="HTML_Audio_player">
+              <div class="Audio_Player_image">
+                
+               <img src="https://cdn-icons-png.flaticon.com/512/5219/5219139.png" /></div>
+        <div class="k2_audio_info">
+          <a class="song-name" target="_blank" href="Pathology pdfs/Inflammation.pdf">Inflammation (1)</a>
+        </div>  
+               <div class="k2_audio_player">
+                  <audio controls>
+        <source src="https://drive.google.com/u/0/uc?id=1-4s3iQaRdxiW7IFgvRw3vz6UY5sro6mp&export=download" type="audio/mpeg"/>
+      </audio>
+               </div>
+            </div>
+        
+      <div class="HTML_Audio_player">
+              <div class="Audio_Player_image">
+                
+               <img src="https://cdn-icons-png.flaticon.com/512/5219/5219139.png" /></div>
+        <div class="k2_audio_info">
+          <a class="song-name" target="_blank" href="#">Inflammation (2)</a>
+        </div>  
+               <div class="k2_audio_player">
+                  <audio controls>
+        <source src="" type="audio/mpeg"/>
+      </audio>
+               </div>
+            </div>
+      <div class="HTML_Audio_player">
+              <div class="Audio_Player_image">
+                
+               <img src="https://cdn-icons-png.flaticon.com/512/5219/5219139.png" /></div>
+        <div class="k2_audio_info">
+          <a class="song-name" target="_blank" href="#">Lecture 3</a>
+        </div>  
+               <div class="k2_audio_player">
+                  <audio controls>
+        <source src="" type="audio/mpeg"/>
+      </audio>
+               </div>
+            </div>
+        
+        
+        <div class="HTML_Audio_player">
+              <div class="Audio_Player_image">
+                
+               <img src="https://cdn-icons-png.flaticon.com/512/5219/5219139.png" /></div>
+        <div class="k2_audio_info">
+          <a class="song-name" target="_blank" href="#">Lecture 4</a>
+        </div>  
+               <div class="k2_audio_player">
+                  <audio controls>
+        <source src="" type="audio/mpeg"/>
+      </audio>
+               </div>
+            </div>
+        
       </div>
-      <div class="user-box">
-        <input type="password" name="" required="" id="password">
-        <label>Password</label>
-      </div>
-      <a href="#" onclick="auth()">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
-  </div>
-<script>
-  function auth(){
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    const users = {
-    "admin": "5655",
-    "ahmed_12": "Ahmed142004",
-    "Zeze_salim": "12345",
-    "Arwa_Ramadan": "12345678910",
-    "BASHAR": "0105536@#$",
-    "Rawda_Taha": "Roode1532003M",
-    "Marco": "12345678",
-    "Sama_Mahmoud": "34000",
-    "Abdelrahman_M_Salah": "GwentCorpus_2468",
-    "Beshoy_Romany": "1960mena@ssd",
-    "sameh1102": "elkhmsawy110211",
-    "Ayman_Etman_2004": "@Ayman_2004#",
-    "Esraa_Ahmed_Ali": "306126",
-    "MohamedSultan": "mohamedsultan1182004@",
-    "Aya_Azzam_Abdel_Gwad": "2182004",
-    "Narden_Rafat": "Narden66",
-    "Radwa_safwat": "radwa25&#",
-    "Reham_Khaled": "Reham12345",
-    "Ahmed_Fawzy": "Ahmed2004",
-    "Ahmed_Osama": "45677654",
-    "Youssef_shaban": "youssef1230400",
-    "Alaa_Ezzat_fathy": "alaaezzatsh57",
-    "Hager_Mahmoud_Abdulla": "hayc36g",
-    "Elamal_nadi": "A151**",
-    "Alyaa_Abo_Elkhair": "10102003",
-    "asmaa_Anwer": "aan123@",
-    "Engy_Amer": "86248973",
-    "Mariam_Mahmoud_Abdallah": "mr123456",
-    "Sama_Anwar": "Sama152004",
-    "Rawan_Sameh_Mahmoud": "rawan123456",
-    "Sohila_gaber": "1912004",
-    "Sohil7": "12345s",
-    "Mohamed_Hesham": "442006",
-    "Menna_Mostafa": "Menna2321",
-    "Sal7ofa_Nemoz": "Sla7ef.20",
-    "Medo_elropy": "me1122",
-    "osamasayed511": "DREAM@osama511",
-    "ziad_mokhtar": "01094707586Ziad",
-    "Mohamed_Gamal": "Mo16141999",
-    "mohammedhayman95": "panda@556612",
-    "Ziadsaqr111": "1242004",
-    "marina_bassem": "MARINA2004",
-    "Asmaa Mohamed": "Estapraq764",
-    "Yasmin_mohamed": "yasminn123",
-    "Mariam_magdy_fouad": "888844",
-    "Gelan_mohsen": "gelan7788#0",
-    "Eyadosama": "0000eeee",
-    "saharehab": "sahar@1252003",
-    "Taghreedsameh": "1102023",
-    "Eman_othman_mohamed": "Eman1462003",
-    "Sohipahmed2004": "Sohipahmed#11",
-    "Rawdaemad2003": "Rawdaemad#22",
-    "Aya Sayed": "ZA252013",
-    "Rawda_Noreldin": "Ma12riam2004",
-    "JOSSE76":"E7M6A20N04",
-    "_y_o_se_f":"ybe176",
-    "yara.toson000@gmail.com":"yara2004",
-    "dalia_mustafa":"dalia456",
-    "Eman146":"eman1462",
-    "roaa_almoataz":"roaa8620",
-    "@user96234105":"1762gi1965gi",
-};
+      
+      <style> 
+        .audio_Player_grid{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          
+        }
+        
+        .HTML_Audio_player{
+        Position: relative;
+          width:350px;
+          background: #faf3f4;
+          box-shadow: 0 50px 80px rgba(0,0,0,0.25);
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border-radius: 20px;
+        }
+        
+        .HTML_Audio_player .Audio_Player_image{
+         position: relative;
+          width:100%;
+          height: 350px;
+          
+        }
+        
+        .HTML_Audio_player .Audio_Player_image img{
+         position: absolute;
+          top:0;
+          bottom: 0;
+          width: 100%;
+          height:100%;
+          object-fit: cover;
+          
+          
+        }
+        
+        .HTML_Audio_player audio {  
+        outline: none;
+        width: 100%;
+        
+        bottom: -2cm;
+        }
+           
+           .song-name { font-size:18px;
+             font-weight:600;
+             display: flex;
+              justify-content: center;
+              margin-top: 10px;
+        }
+        audio::-webkit-media-controls-play-button {
+           background-color: #B1D4E0;
+           border-radius: 50%;}
 
-
-
-
-if (username in users && users[username] === password) {
-    sessionStorage.setItem("loggedIn", true);
-    window.location.assign('main.html');
-    alert("Welcome, " + username );
-} else {
-    alert("Wrong username or password, please try again.");
-    return;
-}
-
-
-  }
-
-</script>
+      </style>
+              <script>
+                if (!sessionStorage.getItem("loggedIn")) {
+                    // Redirect the user back to the login page
+                    window.location.assign('index.html');
+                }
+                
+                
+                
+                        </script>
 </body>
-
-
-
-
-
 </html>
