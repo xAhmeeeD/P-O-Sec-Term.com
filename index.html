@@ -31,7 +31,7 @@
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     const users = {
-    "admin": "333",
+    "admin": "5655",
     "ahmed_12": "Ahmed142004",
     "Zeze_salim": "12345",
     "Arwa_Ramadan": "12345678910",
@@ -94,7 +94,7 @@
 if (username in users && users[username] === password) {
     sessionStorage.setItem("loggedIn", true);
     window.location.assign('main.html');
-    alert("Login successful");
+    alert("Login successful ");
 } else {
     alert("Login failed");
     return;
