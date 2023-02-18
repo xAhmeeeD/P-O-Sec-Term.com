@@ -1,167 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>CAD</title>
-</head>
-<body>
-   <<div class="audio_Player_grid">
-      <div class="HTML_Audio_player">
-              <div class="Audio_Player_image">
-                
-               <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-        <div class="k2_audio_info">
-          <a class="song-name" target="_blank" href="#">Lecture 1</a>
-        </div>  
-               <div class="k2_audio_player">
-                  <audio controls>
-        <source src="" type="audio/mpeg"/>
-      </audio>
-               </div>
-            </div>
-        
-      <div class="HTML_Audio_player">
-              <div class="Audio_Player_image">
-                
-               <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-        <div class="k2_audio_info">
-          <a class="song-name" target="_blank" href="#">Lecture 2</a>
-        </div>  
-               <div class="k2_audio_player">
-                  <audio controls>
-        <source src="" type="audio/mpeg"/>
-      </audio>
-               </div>
-            </div>
-      <div class="HTML_Audio_player">
-              <div class="Audio_Player_image">
-                
-               <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-        <div class="k2_audio_info">
-          <a class="song-name" target="_blank" href="#">Lecture 3</a>
-        </div>  
-               <div class="k2_audio_player">
-                  <audio controls>
-        <source src="" type="audio/mpeg"/>
-      </audio>
-               </div>
-            </div>
-        
-        
-        <div class="HTML_Audio_player">
-              <div class="Audio_Player_image">
-                
-               <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-        <div class="k2_audio_info">
-          <a class="song-name" target="_blank" href="#">Lecture 4</a>
-        </div>  
-               <div class="k2_audio_player">
-                  <audio controls>
-        <source src="" type="audio/mpeg"/>
-      </audio>
-               </div>
-            </div>
-            <div class="HTML_Audio_player">
-               <div class="Audio_Player_image">
-                 
-                <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-         <div class="k2_audio_info">
-           <a class="song-name" target="_blank" href="#">Lecture 5</a>
-         </div>  
-                <div class="k2_audio_player">
-                   <audio controls>
-         <source src="" type="audio/mpeg"/>
-       </audio>
-                </div>
-             </div>
-             <div class="HTML_Audio_player">
-               <div class="Audio_Player_image">
-                 
-                <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-         <div class="k2_audio_info">
-           <a class="song-name" target="_blank" href="#">Lecture 6</a>
-         </div>  
-                <div class="k2_audio_player">
-                   <audio controls>
-         <source src="" type="audio/mpeg"/>
-       </audio>
-                </div>
-             </div>
-             <div class="HTML_Audio_player">
-               <div class="Audio_Player_image">
-                 
-                <img src="https://cdn-icons-png.flaticon.com/512/5332/5332333.png" /></div>
-         <div class="k2_audio_info">
-           <a class="song-name" target="_blank" href="#">Lecture 7</a>
-         </div>  
-                <div class="k2_audio_player">
-                   <audio controls>
-         <source src="" type="audio/mpeg"/>
-       </audio>
-                </div>
-             </div>
-        
-      </div>
-      
-      <style> 
-        .audio_Player_grid{
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-        }
-        
-        .HTML_Audio_player{
-        Position: relative;
-          width:350px;
-          background: #faf3f4;
-          box-shadow: 0 50px 80px rgba(0,0,0,0.25);
-          margin-top: 10px;
-          margin-bottom: 10px;
-          border-radius: 20px;
-        }
-        
-        .HTML_Audio_player .Audio_Player_image{
-         position: relative;
-          width:100%;
-          height: 350px;
-          
-        }
-        
-        .HTML_Audio_player .Audio_Player_image img{
-         position: absolute;
-          top:0;
-          bottom: 0;
-          width: 100%;
-          height:100%;
-          object-fit: cover;
-          
-        }
-        
-        .HTML_Audio_player audio {
+    <style>
+      /* Styling for the card */
+      /* Styling for the card */
+      .card {
+        width: 30%;
+        margin-right: 3%;
+        display: inline-block;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+      }
+
+      /* Styling for the card header */
+      .card-header {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      /* Styling for the video player */
+      video {
         width: 100%;
-        outline: none;
+        background-color: #f4f4f4;
+      }
+
+      /* Styling for the row */
+      .row {
+        margin-bottom: 30px;
+      }
+
+      /* Styling for the last card in each row */
+      .last-in-row {
+        margin-right: 0;
+      }
+
+      /* Styling for the card when expanded */
+      .card.expanded {
+        height: auto;
+      }
+
+      /* Styling for the video player when hidden */
+      .card.hide-video video {
+        display: none;
+      }
+
+      /* Styling for the video name */
+      .video-name {
+        text-align: center;
+      }
+
+      /* Adjust card width and margin for small screens */
+      @media only screen and (max-width: 600px) {
+        .card {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px;
         }
-           
-           .song-name { font-size:18px;
-             font-weight:600;
-             display: flex;
-              justify-content: center;
-              margin-top: 10px;
+        .last-in-row {
+          margin-right: 0;
         }
-        audio::-webkit-media-controls-play-button {
-           background-color: #B1D4E0;
-           border-radius: 50%;}
-      </style>
-              <script>
-                if (!sessionStorage.getItem("loggedIn")) {
-                    // Redirect the user back to the login page
-                    window.location.assign('index.html');
-                }
-                
-                
-                
-                        </script>
-</body>
-</html>
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="card hide-video">
+        <div class="card-header video-name">Video 1</div>
+        <video controls>
+          <source src="https://drive.google.com/u/0/uc?id=1foMxP_gJ_A0nb_nnJR8tnNzmA9Rl8_HL&export=download" type="video/mp4">
+        </video>
+      </div>
+      <div class="card hide-video">
+        <div class="card-header video-name">Video 2</div>
+        <video controls>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="card last-in-row hide-video">
+        <div class="card-header video-name">Video 3</div>
+        <video controls>
+          <source src="video3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card hide-video">
+        <div class="card-header video-name">Video 4</div>
+        <video controls>
+          <source src="video4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="card hide-video">
+        <div class="card-header video-name">Video 5</div>
+        <video controls>
+          <source src="video5.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="card last-in-row hide-video">
+        <div class="card-header video-name">Video 6</div>
+        <video controls>
+          <source src="video6.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <script>
+      // Add an event listener to each card header to toggle the card expansion
+      const headers = document.querySelectorAll('.card-header');
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          header.parentNode.classList.toggle('expanded');
+          header.parentNode.classList.toggle('hide-video');
+        });
+      });
+    </script>
+    
+    
+  </body>
+</html>    
